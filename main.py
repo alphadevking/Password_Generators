@@ -27,9 +27,9 @@ def copy_to_clipboard():
     hash_text = hash_output_text.get('1.0', tk.END).strip()
     if hash_text:
         pyperclip.copy(hash_text)
-        copied_label.config(text="Copied!")
-        # Clear the copied message after 1500 milliseconds (1.5 seconds)
-        root.after(1500, lambda: copied_label.config(text=""))
+        copy_button.config(text="Copied!")
+        # Reset the button text after 1500 milliseconds (1.5 seconds)
+        root.after(1500, lambda: copy_button.config(text="Copy Hash"))
 
 
 # Create the main window
